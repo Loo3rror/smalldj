@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 14px;
+}
+
+body {
+  color: #333333;
+  font-size: 14px;
+  background-color: #fbfbfb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 22px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 416px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-container__row {
+  display: flex;
+  align-items: center;
+}
+
+.form-container__input:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+.form-container__input-label {
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.form-container__input {
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  color: #495057;
+  padding: 8px 12px;
+}
+
+input[type="checkbox"] {
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 8px;
+}
+
+.form-container__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container__box:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+select.form-container__input {
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%239C92AC" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.75rem) center;
+  background-size: 8px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Add margin to the top of the first row */
+.row:first-child {
+  margin-top: 1rem;
+}
+
+/* Add margin to the top of the second row */
+.row:nth-child(2) {
+  margin-top: 2rem;
+}
+
+.green-button {
+  width: fit-content;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+#car-options-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.green-button:hover {
+  background-color: #45a049;
+}
+
+.green-button:focus,
+.green-button:active {
+  background-color: #39833e;
+  outline: none;
+}
+
+#loader {
+  top: calc(50% - 42px);
+  left: calc(50% - 42px);
+  width: 74px;
+  height: 74px;
+  border: 8px solid #45a049;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loader span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #333;
+}

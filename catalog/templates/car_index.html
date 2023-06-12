@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+     {%load static%} 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NetСars demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" /> 
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <form id="car-form" class="form-container">
+      <h1 class="page-title">Параметры фильтрации</h1>
+      {%csrf_token%}
+
+      <!--manuf option -->
+      <div class="form-container__row">
+
+        <div class="form-container__box">
+          <label for="inputPassword5" class="form-container__input-label"
+            >Производитель</label
+          >
+          <select
+            class="form-container__input"
+            id="cars-options"
+            aria-label="Default select example"
+          >
+          </select>
+        </div>
+        {%csrf_token%}
+        <!--model option -->
+        <div class="form-container__box">
+          <label for="inputPassword5" class="form-container__input-label"
+            >Модель</label
+          >
+          <select
+            class="form-container__input"
+            id="model-options"
+            aria-label="Default select example"
+          >
+          </select>
+        </div>
+
+      </div>
+
+
+
+      <!--price select -->
+      <label for="inputPassword5" class="form-container__input-label"
+        >Цена</label
+      >
+      <div class="form-container__row">
+        <input
+          id="price_from"
+          class="form-container__input"
+          type="text"
+          placeholder="минимум"
+        />
+        <input
+          id="price_to"
+          class="form-container__input"
+          type="text"
+          placeholder="максимум"
+        />
+      </div>
+      <!--year select -->
+      <label for="inputPassword5" class="form-container__input-label"
+        >Год</label
+      >
+      <div class="form-container__row">
+        <input
+          id="year_from"
+          class="form-container__input"
+          type="text"
+          placeholder="минимум"
+        />
+        <input
+          id="year_to"
+          class="form-container__input"
+          type="text"
+          placeholder="максимум"
+        />
+      </div>
+      <!--milage select -->
+      <label for="inputPassword5" class="form-container__input-label"
+        >Пробег</label
+      >
+      <div class="form-container__row">
+        <input
+          id="mileage_from"
+          class="form-container__input"
+          type="text"
+          placeholder="минимум"
+        />
+        <input
+          id="mileage_to"
+          class="form-container__input"
+          type="text"
+          placeholder="максимум"
+        />
+      </div>
+      <!--engine select -->
+      <label for="inputPassword5" class="form-container__input-label"
+        >Двигатель</label
+      >
+      <div class="form-container__row">
+        <input
+          id="engine_from"
+          class="form-container__input"
+          type="text"
+          placeholder="минимум"
+        />
+        <input
+          id="engine_to"
+          class="form-container__input"
+          type="text"
+          placeholder="максимум"
+        />
+      </div>
+
+      <!--client option -->
+      <div class="form-container__row">
+        <div class="form-container__box">
+
+      <label for="inputPassword5" class="form-container__input-label"
+        >Коробка передач</label
+      >
+      <select
+        class="form-container__input"
+        id="trans-options"
+        aria-label="Default select example"
+      >
+      </select>
+
+
+</div>
+        <div class="form-container__box">
+                <label for="inputPassword5" class="form-container__input-label"
+        >Цвет</label
+      >
+      <select
+        class="form-container__input"
+        id="color-options"
+        aria-label="Default select example"
+      >
+      </select>
+        </div>
+        <div class="form-container__box">
+                <label for="inputPassword5" class="form-container__input-label"
+        >Топливо</label
+      >
+      <select
+        class="form-container__input"
+        id="fuel-options"
+        aria-label="Default select example"
+      >
+      </select>
+        </div>
+
+</div>
+
+        <div class="form-container__box">
+                <label for="inputPassword5" class="form-container__input-label"
+        >Тип клиента</label
+      >
+      <select
+        class="form-container__input"
+        id="client-options"
+        aria-label="Default select example"
+      >
+        <option class="item" value="FzKz">Фз КЗ</option>
+        <option class="item" value="OPTRFKZ">Оптовик РФ-КЗ</option>
+        <option class="item" value="OPTRFKIRG">Оптовик РФ-КГ</option>
+      </select>
+        </div>
+
+      <label class="form-container__input-label">Опции</label>
+      <div id="car-options-wrapper"></div>
+      <button id="generate_cars" type="button" class="green-button">
+        Получить список
+      </button>
+            <div id="loader"></div>
+    </form>
+  </body>
+<script src="{% static 'main.js' %}"></script> -->
+</html>
